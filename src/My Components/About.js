@@ -1,10 +1,14 @@
 import React from 'react'
 
 export const About = () => {
+    let AboutStyle = {
+        height:"80vh",
+        backgroundColor:"#f0f0f0"
+    }
     return (
-        <div>
-            This is an about component
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nam totam et accusamus aut quidem, illum minima architecto modi expedita! Ducimus dolorem, sequi ipsum reiciendis architecto facere reprehenderit delectus ipsa officia, porro minima id!</p>
+        <div style={AboutStyle}>
+            <h3 className="container py-3">This is an about page</h3> 
+            <p className="container">This app is Developed using React Js</p>
         </div>
     )
 }

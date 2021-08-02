@@ -8,8 +8,7 @@ import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -34,16 +33,12 @@ function App() {
     else {
       sno = todos[todos.length - 1].sno + 1;
     }
-
     const myTodo = {
       sno: sno,
       title: title,
       desc: desc
     }
     setTodos([...todos, myTodo]);
-    // console.log(myTodo);
-
-
   }
   const [todos, setTodos] = useState(initTodo);
   useEffect(() => {
@@ -59,21 +54,14 @@ function App() {
             <Todos todos={todos} onDelete={onDelete} />
             </>)
           }}>
-            
           </Route>
           <Route path="/about">
             <About />
           </Route>
-          
         </Switch>
-      
-
       <Footer />
       </Router>
     </>
-
   );
-
 }
-
 export default App;
